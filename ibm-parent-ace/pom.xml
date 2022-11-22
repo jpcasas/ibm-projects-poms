@@ -3,7 +3,7 @@
     <parent>
         <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
         <artifactId>ibm-pom-parent</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <ibm.plugin.version>1.0.1</ibm.plugin.version>
+        <ibm.plugin.version>1.0.0</ibm.plugin.version>
     </properties>
 
     <name>ibm-parent-ace</name>

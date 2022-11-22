@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
     <artifactId>ibm-pom-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -33,13 +33,13 @@
     </distributionManagement>
 
     <modules>
-        <module>ibm-integration-assemblies</module>
+        
         <module>ibm-parent-ace</module>
         <module>ibm-parent-stlib</module>
         <module>ibm-parent-java</module>
         <module>ibm-parent-api</module>
         <module>ibm-parent-mq</module>
-        <module>ibm-maven-plugin</module>
+        
 
     </modules>
 
