@@ -11,13 +11,13 @@
 
     <name>ibm-pom-parent</name>
     <description>Parent POM For POMS of ACE MQ AND APIC Projects</description>
-    <url>https://github.com/jpcasas/ibm-maven-tools.git</url>
+    <url>https://github.com/jpcasas/ibm-projects-poms.git</url>
 
 
     <scm>
-        <connection>scm:git:git://github.com/jpcasas/ibm-maven-tools.git</connection>
-        <developerConnection>scm:git:https://github.com:jpcasas/ibm-maven-tools.git</developerConnection>
-        <url>http://github.com/jpcasas/ibm-maven-tools/tree/master</url>
+        <connection>scm:git:git://github.com/jpcasas/ibm-projects-poms.git</connection>
+        <developerConnection>scm:git:https://github.com/jpcasas/ibm-projects-poms.git</developerConnection>
+        <url>http://github.com/jpcasas/ibm-projects-poms/tree/master</url>
     </scm>
 
     <distributionManagement>
