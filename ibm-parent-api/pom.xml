@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+     <parent>
+        <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
+        <artifactId>ibm-pom-parent</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
+    <artifactId>ibm-pom-api</artifactId>
+    <packaging>pom</packaging>
+
+    <name>ibm-parent-api</name>
+    <description>Parent POM For APIC projects</description>
+    <url>https://github.com/jpcasas/ibm-maven-tools.git</url>
+    
+
+    <properties>
+        <ibm.plugin.version>1.0.1</ibm.plugin.version>
+    </properties>
+
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>io.github.jpcasas.ibm.plugin.assemblies</groupId>
+                            <artifactId>ibm-integration-assemblies</artifactId>
+                            <version>1.0.2-SNAPSHOT</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                            <configuration>
+                                <appendAssemblyId>false</appendAssemblyId>
+                                <descriptorRefs>
+                                    <descriptorRef>apic</descriptorRef>
+                                </descriptorRefs>
+
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>default-jar</id>
+                            <phase>none</phase>
+                            <configuration>
+                                <finalName>unwanted</finalName>
+                                <classifier>unwanted</classifier>
+                            </configuration>
+                        </execution>
+                    </executions>
+                    <version>3.2.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <resources>
+            <resource>
+                <directory>resources</directory>
+            </resource>
+        </resources>
+    </build>
+
+</project>

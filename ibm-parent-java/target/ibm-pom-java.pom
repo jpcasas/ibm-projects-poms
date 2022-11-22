@@ -1,0 +1,113 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+     <parent>
+        <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
+        <artifactId>ibm-pom-parent</artifactId>
+        <version>1.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
+    <artifactId>ibm-pom-java</artifactId>
+    <packaging>pom</packaging>
+
+    <name>ibm-parent-java</name>
+    <description>Parent POM For ACE Java Libs</description>
+    <url>https://github.com/jpcasas/ibm-maven-tools.git</url>
+    
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+   
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ibm</groupId>
+                <artifactId>IntegrationAPI</artifactId>
+                <version>12.0.6</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ibm.etools.mft</groupId>
+                <artifactId>jplugin2</artifactId>
+                <version>12.0.6</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ibm.etools.mft</groupId>
+                <artifactId>javacompute</artifactId>
+                <version>12.0.6</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <!--<sourceDirectory>src</sourceDirectory>-->
+        <sourceDirectory>./</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.1.2</version>
+                    <executions>
+                        <execution>
+                            <id>copy-dependencies</id>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>copy-dependencies</goal>
+                            </goals>
+                            <configuration>
+                                <stripVersion>true</stripVersion>
+                                <stripClassifier>true</stripClassifier>
+                                <excludeTransitive>true</excludeTransitive>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>io.github.jpcasas.ibm.plugin.assemblies</groupId>
+                            <artifactId>ibm-integration-assemblies</artifactId>
+                            <version>1.0.2-SNAPSHOT</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                            <configuration>
+                                <appendAssemblyId>false</appendAssemblyId>
+                                <descriptorRefs>
+                                    <descriptorRef>java</descriptorRef>
+                                </descriptorRefs>
+                            </configuration>
+                        </execution>
+                    </executions>
+
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+
+
+</project>
