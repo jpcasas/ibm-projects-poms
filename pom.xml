@@ -16,8 +16,8 @@
 
     <scm>
         <connection>scm:git:git://github.com/jpcasas/ibm-maven-tools.git</connection>
-        <developerConnection>scm:git:https://github.com/jpcasas/ibm-projects-poms.git</developerConnection>
-        <url>http://github.com/jpcasas/ibm-projects-poms/tree/master</url>
+        <developerConnection>scm:git:ssh://github.com:jpcasas/ibm-maven-tools.git</developerConnection>
+        <url>http://github.com/jpcasas/ibm-maven-tools/tree/master</url>
     </scm>
 
     <distributionManagement>
