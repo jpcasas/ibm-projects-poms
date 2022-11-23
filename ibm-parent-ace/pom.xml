@@ -93,19 +93,6 @@
                     </executions>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <id>default-jar</id>
-                            <phase>none</phase>
-                            <configuration>
-                                <finalName>unwanted</finalName>
-                                <classifier>unwanted</classifier>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-                <plugin>
                     <groupId>io.github.jpcasas.ibm.plugin</groupId>
                     <artifactId>ibm-maven-plugin</artifactId>
                     <version>${ibm.plugin.version}</version>
@@ -118,42 +105,6 @@
                             </goals>
                         </execution>
                     </executions>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                    <executions>
-                        <execution>
-                          <id>default-compile</id>
-                          <phase>compile</phase>
-                          <goals>
-                            <goal>compile</goal>
-                          </goals>
-                          <configuration>
-                            <encoding>UTF-8</encoding>
-                            <source>1.8</source>
-                            <target>1.8</target>
-                          </configuration>
-                        </execution>
-                        <execution>
-                          <id>default-testCompile</id>
-                          <phase>test-compile</phase>
-                          <goals>
-                            <goal>testCompile</goal>
-                          </goals>
-                          <configuration>
-                            <encoding>UTF-8</encoding>
-                            <source>1.8</source>
-                            <target>1.8</target>
-                          </configuration>
-                        </execution>
-                      </executions>
-                      <configuration>
-                        <encoding>UTF-8</encoding>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                      </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
