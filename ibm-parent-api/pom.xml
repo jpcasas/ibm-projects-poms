@@ -12,12 +12,8 @@
 
     <name>ibm-parent-api</name>
     <description>Parent POM For APIC projects</description>
-    <url>https://github.com/jpcasas/ibm-maven-tools.git</url>
+    <url>https://github.com/jpcasas/ibm-projects-poms.git</url>
     
-
-    <properties>
-        <ibm.plugin.version>1.0.0</ibm.plugin.version>
-    </properties>
 
 
     <build>

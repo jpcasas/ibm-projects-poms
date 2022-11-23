@@ -12,7 +12,7 @@
 
     <name>ibm-parent-java</name>
     <description>Parent POM For ACE Java Libs</description>
-    <url>https://github.com/jpcasas/ibm-maven-tools.git</url>
+    <url>https://github.com/jpcasas/ibm-projects-poms.git</url>
     
 
     <properties>

@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
     <name>ibm-parent-mq</name>
     <description>Parent POM For MQ Projects </description>
-    <url>https://github.com/jpcasas/ibm-maven-tools.git</url>
+    <url>https://github.com/jpcasas/ibm-projects-poms.git</url>
 
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -38,19 +38,7 @@
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <id>default-jar</id>
-                            <phase>none</phase>
-                            <configuration>
-                                <finalName>unwanted</finalName>
-                                <classifier>unwanted</classifier>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
+                
             </plugins>
         </pluginManagement>
         <resources>

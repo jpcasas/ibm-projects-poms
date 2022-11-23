@@ -10,13 +10,11 @@
     <artifactId>ibm-pom-ace</artifactId>
     <packaging>pom</packaging>
 
-    <properties>
-        <ibm.plugin.version>1.0.0</ibm.plugin.version>
-    </properties>
+    
 
     <name>ibm-parent-ace</name>
     <description>Parent POM For ACE Applications</description>
-    <url>https://github.com/jpcasas/ibm-maven-tools.git</url>
+    <url>https://github.com/jpcasas/ibm-projects-poms.git</url>
     
     <build>
         <finalName>${project.artifactId}</finalName>

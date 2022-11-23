@@ -4,19 +4,17 @@
      <parent>
         <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
         <artifactId>ibm-pom-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
     <artifactId>ibm-pom-shared</artifactId>
     <packaging>pom</packaging>
-    <properties>
-        <ibm.plugin.version>1.0.0</ibm.plugin.version>
-    </properties>
+   
 
     <name>ibm-parent-shlib</name>
     <description>Parent POM For ACE Shared libs</description>
-    <url>https://github.com/jpcasas/ibm-maven-tools.git</url>
+    <url>https://github.com/jpcasas/ibm-projects-poms.git</url>
 
 
     <build>
@@ -56,20 +54,6 @@
                         </execution>
                     </executions>
                 </plugin>
-               
-                <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <id>default-jar</id>
-                            <phase>none</phase>
-                            <configuration>
-                                <finalName>unwanted</finalName>
-                                <classifier>unwanted</classifier>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
                 <plugin>
                     <groupId>io.github.jpcasas.ibm.plugin</groupId>
                     <artifactId>ibm-maven-plugin</artifactId>
@@ -84,42 +68,7 @@
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                    <executions>
-                        <execution>
-                          <id>default-compile</id>
-                          <phase>compile</phase>
-                          <goals>
-                            <goal>compile</goal>
-                          </goals>
-                          <configuration>
-                            <encoding>UTF-8</encoding>
-                            <source>1.8</source>
-                            <target>1.8</target>
-                          </configuration>
-                        </execution>
-                        <execution>
-                          <id>default-testCompile</id>
-                          <phase>test-compile</phase>
-                          <goals>
-                            <goal>testCompile</goal>
-                          </goals>
-                          <configuration>
-                            <encoding>UTF-8</encoding>
-                            <source>1.8</source>
-                            <target>1.8</target>
-                          </configuration>
-                        </execution>
-                      </executions>
-                      <configuration>
-                        <encoding>UTF-8</encoding>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                      </configuration>
-                </plugin>
+                
                 
             </plugins>
         </pluginManagement>
