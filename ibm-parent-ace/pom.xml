@@ -93,6 +93,19 @@
                     </executions>
                 </plugin>
                 <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>default-jar</id>
+                            <phase>none</phase>
+                            <configuration>
+                                <finalName>unwanted</finalName>
+                                <classifier>unwanted</classifier>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
                     <groupId>io.github.jpcasas.ibm.plugin</groupId>
                     <artifactId>ibm-maven-plugin</artifactId>
                     <version>${ibm.plugin.version}</version>
@@ -106,6 +119,7 @@
                         </execution>
                     </executions>
                 </plugin>
+
             </plugins>
         </pluginManagement>
         <resources>
