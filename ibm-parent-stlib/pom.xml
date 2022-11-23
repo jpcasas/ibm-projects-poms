@@ -3,11 +3,12 @@
     <parent>
        <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
        <artifactId>ibm-pom-parent</artifactId>
-       <version>1.0.2</version>
+       <version>1.0.3-SNAPSHOT</version>
    </parent>
    <modelVersion>4.0.0</modelVersion>
    <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
    <artifactId>ibm-pom-stlib</artifactId>
+  <version>1.0.1</version>
    <packaging>pom</packaging>
 
    <name>ibm-parent-stlib</name>
