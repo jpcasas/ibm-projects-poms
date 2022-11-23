@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.jpcasas.ibm.plugin.pom</groupId>
     <artifactId>ibm-pom-parent</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -18,7 +18,7 @@
         <connection>scm:git:git://github.com/jpcasas/ibm-projects-poms.git</connection>
         <developerConnection>scm:git:https://github.com/jpcasas/ibm-projects-poms.git</developerConnection>
         <url>http://github.com/jpcasas/ibm-projects-poms/tree/master</url>
-      <tag>ibm-pom-parent-1.0.3</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <distributionManagement>
